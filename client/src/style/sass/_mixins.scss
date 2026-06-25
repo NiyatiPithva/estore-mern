@@ -1,0 +1,40 @@
+@mixin transition($property, $duration){
+    transition-property: $property;
+    transition-duration: $duration;
+}
+
+@mixin style-reset-a-li {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@mixin underline-transition($scale) {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+        transform: scaleX($scale);
+    }
+}
