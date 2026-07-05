@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import { showCartItems } from "../../Redux/Cart/cartSlice";
 // import { clearCart } from "../../redux/reducer/cartSlice";
 // import { placeOrder } from "../../redux/reducer/orderSlice";
 import "./Payment.scss";
@@ -20,7 +21,7 @@ const Payment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const cartItems = useSelector((state) => state.cart?.items || []);
+  const cartItems = useSelector((state) => state.cr.cartItems || []);
 
   const [shipping, setShipping] = useState({
     fullName: "",
