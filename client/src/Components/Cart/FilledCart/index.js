@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateItemQuantity } from "../../../Redux/Cart/cartSlice";
+import { updateItemQuantity,removeCartItem,deleteCartItem } from "../../../Redux/Cart/cartSlice";
 import "./_filled-cart.scss";
+import { Link } from "react-router-dom";
 
 const FilledCart = ()=>{
     const cart = useSelector(state => state.cr);
@@ -53,7 +54,7 @@ const FilledCart = ()=>{
                                                             <span> + </span>
                                                         </div>
                                                     </div>
-                                                    <div className="btn btn-outline-danger mx-4">
+                                                    <div className="btn btn-outline-danger mx-4" onClick={() => dispatch(deleteCartItem({ key }))}>
                                                         <span> <i className="fa fa-trash mx-2"/> Remove Item </span>
                                                     </div>
                                                 </div>
@@ -77,7 +78,9 @@ const FilledCart = ()=>{
                         <hr/>
                     </div>
                     <div className="btn btn-outline-dark w-100 mb-4 mt-1">
+                        <Link to="/payment">
                         Checkout
+                        </Link>
                     </div>
                 </div>
 

@@ -1,3 +1,33 @@
 $accent-color: red;
 $icon-font: 1.3em;
 $element-height: 2.5em;
+
+
+$primary:        #1a1a2e;   // deep navy — nav, dark surfaces
+$primary-mid:    #16213e;   // slightly lighter nav bg
+$accent:         #e8a045;   // warm amber — CTAs, highlights
+$accent-hover:   #d4892e;   // darker amber on hover
+$accent-light:   #fdf3e3;   // tint for badges, hover fills
+
+$success:        #2d9e6b;
+$danger:         #e05252;
+$text-muted:     #6b7280;
+$text-dark:      #1f2937;
+$text-light:     #f9fafb;
+
+$border:         #e5e7eb;
+$card-bg:        #ffffff;
+$page-bg:        #f5f4f0;   // warm off-white page background
+$sidebar-bg:     #ffffff;
+
+$radius-sm:      6px;
+$radius-md:      10px;
+$radius-lg:      16px;
+$radius-pill:    50px;
+
+$shadow-sm:      0 1px 4px rgba(0,0,0,0.07);
+$shadow-md:      0 4px 16px rgba(0,0,0,0.1);
+$shadow-lg:      0 8px 32px rgba(0,0,0,0.14);
+
+$icon-font:      1.3em;
+$element-height: 2.5em;

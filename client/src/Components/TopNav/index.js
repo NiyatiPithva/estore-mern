@@ -25,7 +25,7 @@ const TopNav = ()=>{
                 </div>
                 <div className='login-container p-0'>
                     <i className='fa fa-user-circle user-icon'/>
-                    <h5> <a href='#'> Login</a></h5> / <h5><a href='#'>Register</a></h5>
+                    <h5> <Link to='/login'> Login</Link></h5> / <h5><Link to='/register'>Register</Link></h5>
                 </div>
                 <div className='cart-wishlist'>
                     <ul className='p-0'>

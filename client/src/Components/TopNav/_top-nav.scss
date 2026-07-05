@@ -1,4 +1,5 @@
 @import '../../style/sass/variables';
+@import '../../style/sass/mixins';
 
 .header{
     max-width: 100%;
@@ -90,4 +91,124 @@
       color: black;
     }
   }
+}
+
+
+.header {
+    max-width: 100%;
+    background-color: $primary;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.22);
+}
+
+.top-nav-row div {
+    display: inline-block;
+}
+
+.brand {
+    color: $accent;
+    margin-left: 2%;
+    padding: 0.6em;
+    width: 18%;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    h1 { font-size: 1.6rem; margin: 0; }
+}
+
+.inp-container {
+    border: 2px solid $accent;
+    border-radius: $radius-md;
+    overflow: hidden;
+    background: white;
+
+    input {
+        width: 72%;
+        height: $element-height;
+        border: none;
+        outline: none;
+        padding: 0 0.8em;
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 12%;
+        height: $element-height;
+        border: none;
+        background-color: $accent;
+        color: white;
+        cursor: pointer;
+        @include transition(background, 0.2s);
+        &:hover { background-color: $accent-hover; }
+    }
+}
+
+.dropdown { width: 16%; }
+
+.select-btn {
+    height: $element-height;
+    border: none;
+    border-right: 1px solid $border;
+    background-color: #f5f4f0;
+    font-weight: 600;
+    color: $text-dark;
+    outline: none;
+    padding: 0 0.5em;
+}
+
+.login-container {
+    width: 15%;
+    color: $text-light;
+    text-align: right;
+    margin: 1.5em 0.3em 0 0;
+
+    a {
+        text-decoration: none;
+        color: $text-light;
+        @include transition(color, 0.2s);
+        &:hover { color: $accent; }
+    }
+}
+
+.user-icon {
+    margin-right: 0.4em;
+    font-size: $icon-font;
+    color: $accent;
+}
+
+.cart-wishlist {
+    width: 7%;
+    margin-top: 1.5em;
+    margin-left: 0.5em;
+
+    .list-icon {
+        color: $text-light;
+        font-size: $icon-font;
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 0.6em;
+        cursor: pointer;
+        @include transition(color, 0.2s);
+        &:hover { color: $accent; }
+    }
+}
+
+.list-icon {
+    #cart-item-count {
+        border-radius: 50%;
+        background-color: $accent;
+        position: absolute;
+        height: 1.1em;
+        width: 1.1em;
+        left: 90.5%;
+        top: 1.8%;
+        text-align: center;
+        line-height: 95%;
+
+        p {
+            font-size: 0.75em;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            padding-top: 2px;
+        }
+    }
 }
